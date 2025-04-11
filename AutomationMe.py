@@ -295,20 +295,18 @@ class AutomationMe:
         paginas = self.nav.find_elements('class name', 'paginacao')
 
         for s in range(2, len(paginas) + 1):
-<<<<<<< HEAD
 
-=======
+
             print(s)
->>>>>>> e63fb76eddb842d7fb413f0a839108f4ca7c3624
+
             try:
                 datas = self.nav.find_elements('tag name', 'tr')
                 for i in range(len(datas) - 1):
                     elemento = self.nav.find_element('xpath', f'//*[@id="carregalista"]/div[1]/div/table/tbody/tr[{i+1}]/td[1]/a')
                     dt = elemento.text[:10]
-<<<<<<< HEAD
-=======
+
                     print(dt)
->>>>>>> e63fb76eddb842d7fb413f0a839108f4ca7c3624
+
 
                     if dt == data:
 
@@ -397,32 +395,7 @@ class AutomationMe:
 #print(AutomationMe._is_valid_date("asdsafsadf"))
 a = AutomationMe(email, senha, site)
 a.login()
-<<<<<<< HEAD
-
-
-info = """ENTRADA NOIVO
-
-https://www.youtube.com/watch?v=PYI09PMNazw
-Ecstasy of gold
-
-ENTRADA PAIS/PADRINHOS
-
-https://www.youtube.com/watch?v=NlprozGcs80
-Pachebel Canon in D
-
-https://www.youtube.com/watch?v=mFWQgxXM_b8
-Spring Vivaldi
-
-NOIVA
-
-https://www.youtube.com/watch?v=CsSiy1VgH4Y
-"""
-
-print(a.insert_information('12/04/2025', info))
-
-=======
-print(a.insert_information('07/03/2026', 'Lady Gaga'))
->>>>>>> e63fb76eddb842d7fb413f0a839108f4ca7c3624
+print(a.insert_information('12/04/2025', 'Lady Gaga'))
 #print(a.novo_orcamento("Empresarial", "", "Jhonatan", "61991480625", "", "Foz do Iguaçu - Paraná", ['Banda completa Corporativo', 'Rider']))
 #print(a.efetuarReserva("20/01/2025", "Lucas Comin", "45 98412-4576"))
 
